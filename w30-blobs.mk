@@ -16,5 +16,5 @@ LOCAL_PATH := device/ramos/w30
     
 #Prebuilt Files
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,system/lib/modules)
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,system/lib/modules) \
 	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/system,system)
