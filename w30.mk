@@ -48,14 +48,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/80cfw:system/etc/init.d/80cfw
 
-# Product specific Packages
-PRODUCT_PACKAGES += \
-    GalaxyS3Settings \
-    libsecril-client \
-    libsecril-client-sap \
-    SamsungServiceMode
-
-    # RIL
+# RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=Smdk4210RIL \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
@@ -63,4 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ril.gprsclass=10
 
 # These are the hardware-specific features
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 $(call inherit-product-if-exists, device/ramos/w30/w30-blobs.mk)
