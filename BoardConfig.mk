@@ -21,8 +21,9 @@
 
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_i9300_defconfig
+# TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
+# TARGET_KERNEL_CONFIG := cyanogenmod_i9300_defconfig
+TARGET_PREBUILT_KERNEL := device/ramos/w30/kernel
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := smdk4x12,W30,w30
