@@ -41,4 +41,8 @@ PRODUCT_COPY_FILES += \
     
 #Prebuilt Kernel Modules
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,device/ramos/w30/modules,system/lib/modules)
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,system/lib/modules)
+
+#Prebuilt Firmware
+PRODUCT_COPY_FILES += \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/proprietary/system/etc/firmware,system/etc/firmware)
