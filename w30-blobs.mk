@@ -31,8 +31,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/usr/keylayout/pixcir-i2c-ts_key.kl:system/usr/keylayout/pixcir-i2c-ts_key.kl \
-    $(LOCAL_PATH)/proprietary/system/usr/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl \
-    $(LOCAL_PATH)/proprietary/system/usr/keylayout/sec_keyboard.kl:system/usr/keylayout/sec_keyboard.kl
+    $(LOCAL_PATH)/proprietary/system/usr/keylayout/samsung-keypad.kl:system/usr/keylayout/samsung-keypad.kl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/system/vendor/firmware/fimc_is_fw.bin:system/vendor/firmware/fimc_is_fw.bin \
