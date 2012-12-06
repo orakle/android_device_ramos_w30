@@ -19,11 +19,27 @@
 
 -include device/samsung/smdk4412-common/BoardCommonConfig.mk
 
+# W30 has different bootloader name
+TARGET_BOOTLOADER_BOARD_NAME := smdk
 
 # Kernel
 # TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 # TARGET_KERNEL_CONFIG := cyanogenmod_i9300_defconfig
 TARGET_PREBUILT_KERNEL := device/ramos/w30/kernel
+
+# Wifi
+WIFI_DRIVER := mt6620
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
+WIFI_DRIVER_MODULE_NAME := "wlan"
+WIFI_DRIVER_MODULE_ARG  := "nvram_path=/system/nvram/APCFG/APRDEB/"
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+#BOARD_HOSTAPD_DRIVER_RTL := true
+BOARD_HAVE_SAMSUNG_WIFI := false
+
+#Bluetooth
+BOARD_HAVE_SAMSUNG_BLUETOOTH := false
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := smdk4x12,W30,w30
